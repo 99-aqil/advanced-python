@@ -32,7 +32,7 @@ class CurrentAccount(BankAccount):
     def withdraw(self, amount):
         self.balance -= amount
 
-# Usage example
+
 savings_account = SavingsAccount()
 savings_account.deposit(1000)
 savings_account.withdraw(500)
