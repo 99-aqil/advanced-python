@@ -1,0 +1,20 @@
+<h1>User Information</h1>
+<table>
+    <tr>
+        <th>Username</th>
+        <th>Email</th>
+        <th>User Type</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.userType }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <input type="submit" value="Logout">
+</form>
